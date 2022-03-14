@@ -1,0 +1,11 @@
+<h2 id="header">Trending Memes...</h2>
+
+<div *ngIf="showMemesPage; else noData">
+    <app-memes></app-memes>
+</div>
+<ng-template #noData>
+    <div id="no-data">
+        No memes avaiable to display. Please come back later.
+        Thanks for visiting us :)
+    </div>
+</ng-template>

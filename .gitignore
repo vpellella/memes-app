@@ -1,0 +1,80 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Miscellaneous ###
+.jpb
+
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/memes-app-ui/dist
+/memes-app-ui/tmp
+/memes-app-ui/out-tsc
+/memes-app-ui/bazel-out
+
+# Node
+/memes-app-ui/node_modules
+memes-app-ui/npm-debug.log
+memes-app-ui/yarn-error.log
+
+# IDEs and editors
+memes-app-ui/.idea/
+memes-app-ui/.project
+memes-app-ui/.classpath
+memes-app-ui/.c9/
+memes-app-ui/*.launch
+memes-app-ui/.settings/
+memes-app-ui/*.sublime-workspace
+
+# Visual Studio Code
+memes-app-ui/.vscode/*
+memes-app-ui/!.vscode/settings.json
+memes-app-ui/!.vscode/tasks.json
+memes-app-ui/!.vscode/launch.json
+memes-app-ui/!.vscode/extensions.json
+memes-app-ui/.history/*
+
+# Miscellaneous
+/memes-app-ui/.angular/cache
+memes-app-ui/.sass-cache/
+/memes-app-ui/connect.lock
+/memes-app-ui/coverage
+/memes-app-ui/libpeerconnection.log
+memes-app-ui/testem.log
+/memes-app-ui/typings
+
+# System files
+memes-app-ui/.DS_Store
+memes-app-ui/Thumbs.db

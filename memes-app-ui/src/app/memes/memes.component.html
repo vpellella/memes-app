@@ -1,0 +1,7 @@
+<div *ngFor="let meme of memes ; let i = index">
+  <div class="meme-card">
+    <h4>{{meme.name}}</h4>
+    <img [src]="meme.url" alt="{{meme.id}}" width="meme.width" height="meme.height">
+    <div>watchers : {{meme.box_count}}</div>
+  </div>
+</div>
