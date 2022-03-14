@@ -1,0 +1,16 @@
+mvn spring-boot:build-image 
+docker run -p <external-port>:<internal-port> <image-name>:<tag-name>
+docker container ls  --> grab the container id
+docker container commit <container-id> <image-name>:<tag-name>
+docker image tag memes-app <username>/<repository-name>:<tag-name>
+docker image push <username>/<repository-name>:<tag-name>
+
+
+
+## commands used to publish memes-app to repository inside docker hub
+mvn spring-boot:build-image 
+docker run -p 8080:8080 memes-app:latest
+docker container ls  --> grab the container id
+docker container commit 41dbb796f98c memes-app:latest
+docker image tag memes-app vineelpellella/memes-app:latest
+docker image push vineelpellella/memes-app:latest
