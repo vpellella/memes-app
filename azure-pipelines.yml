@@ -41,6 +41,6 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-- bash: docker login -u vineelpellella -p ${DOCKER_ACCESS_TOKEN}
+- bash: docker login -u vineelpellella -p $(DOCKER_ACCESS_TOKEN)
 - bash: docker image tag memes-app:0.0.3-SNAPSHOT vineelpellella/memes-app
 - bash: docker push vineelpellella/memes-app
