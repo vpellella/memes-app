@@ -22,16 +22,14 @@ jobs:
       publishJUnitResults: true
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
       goals: 'package'
-  - task: DownloadFileshareArtifacts@1
+  - task: Bash@3
     inputs:
-      filesharePath: '\server\folder'
-      artifactName: 'memes-app-image'
-      itemPattern: '**/*memes-app*'
-      downloadPath: '$(System.ArtifactsDirectory)'
+      targetType: 'inline'
+      script: 'docker save memes-app:0.0.3-SNAPSHOT -o $(Pipeline.Workspace)/MY_IMAGE_FILE.tar'
 - job: Push_Image
   dependsOn: Build_Image
   steps:
-  - bash: docker login -u vineelpellella -p ${DOCKER_ACCESS_TOKEN}
-  - bash: docker image tag memes-app:0.0.3-SNAPSHOT vineelpellella/memes-app
-  - bash: docker push vineelpellella/memes-app
+  - bash: docker login -u vineelpellella -p $(DOCKER_ACCESS_TOKEN)
+  - bash: docker image tag memes-app:0.0.3-SNAPSHOT vineelpellella/memes-app:$(Build.BuildId)
+  - bash: docker push vineelpellella/memes-app:$(Build.BuildId)
 
